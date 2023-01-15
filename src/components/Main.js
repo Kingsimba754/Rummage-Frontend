@@ -1,8 +1,15 @@
-import React from 'react'
+import {useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom';
+import Index from '../pages/Index'
 
-const Main = () => {
+const Main = (props) => {
   return (
-    <div>Main</div>
+    <main>
+      <Routes>
+        <Route path = '/' element = {
+          <Index/>} />
+      </Routes>
+    </main>
   )
 }
 
