@@ -23,6 +23,23 @@ function Main(props){
     });
     getRummage();
   };
+  const updateRummage = async (id,updatedThing) =>{
+    await fetch(URL + id,{
+      method:'PUT',
+      headers:{
+        'Content-type': 'Application/json'
+      },
+      body:JSON.stringify(updatedThing)
+    });
+    getRummage();
+  };
+
+const deleteRummage = async (id)=>{
+  await fetch (URL+ id, {
+    method:'DELETE'
+  });
+  getRummage();
+};
 
 useEffect(()=>{
   getRummage();
@@ -32,8 +49,17 @@ useEffect(()=>{
   return (
     <main>
       <Routes>
-        <Route path = '/' element={<Landing/>}/>
-        <Route path = '/Rummage/:id' element = {<Show/>}/>
+        <Route path = '/' element={
+        <Landing
+        rummage={rummage}
+        createRummage ={createRummage}/>}/>
+        
+        <Route path = '/Rummage/:id' element = {
+        <Show
+          rummage= {rummage}
+          deleteRummage ={deleteRummage}
+          updateRummage = {updateRummage}
+        />}/>
 
       </Routes>
     </main>

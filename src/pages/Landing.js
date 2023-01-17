@@ -60,7 +60,7 @@ function Landing (props){
         value = {newForm.Price} 
         /><br />
     </form>
-    { props.people ? loaded() : loading() }
+    { props.rummage ? loaded() : loading() }
 </section>
   )
 }
