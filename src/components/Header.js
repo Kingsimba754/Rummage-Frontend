@@ -21,6 +21,11 @@ const Header = (props) => {
        <button className="contrast">Login</button>
       </a>
     </li>
+    <li>
+      <a href="/rummage/new" className="primary">
+       <button className="contrast">Create</button>
+      </a>
+    </li>
   </ul>
 </nav>
   )

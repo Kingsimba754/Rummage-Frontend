@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 import Landing from '../pages/Landing';
+import NewForm from './NewForm';
+import Card from './Card';
 import Show from '../pages/Show';
 
 function Main(props){
@@ -50,8 +52,11 @@ useEffect(()=>{
     <main>
       <Routes>
         <Route path = '/' element = {
-          <Index/>} />
+          <Landing/>} />
+          <Route path = '/rummage/new' element = {
+            <NewForm/>} />
       </Routes>
+      <Card/>
     </main>
   )
 }

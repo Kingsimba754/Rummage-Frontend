@@ -2,67 +2,33 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 
-function Landing (props){
-  const formFields = {
-    name : '',
-    image : '',
-    Description: '',
-    Price: '',
-  };
-  const [newForm, setNewForm] = useState (formFields);
-  const handleChange = (event) =>{
-    setNewForm({
-      ...newForm,
-      [event.target.name]: event.target.value
-    });
+
+const Landing = (props) =>{
+
+    const loaded = () =>{
+    return (
+    props.rummage.map(items =>(
+      <div key = {items._id}>
+        <Link to = {`/Rummage/${items._id}`}>
+          <h1>{items.name}</h1>
+          <div>{items.image}</div>
+        </Link>
+      <div>{items.price}</div>
+      </div>
+    ))
+  )};
+
+  const loading = () => {
+    return <h1>Rummaging through our items</h1>
   };
 
-  const handleSubmit = (event) =>{
-    event.preventDefault();
-    props.createRummage(newForm);
-    setNewForm(formFields);
-  };
-  const loaded = () =>{
-    return props.rummage.map(things =>(
-      <div key = {things._id}>
-        <Link to = {`/Rummage/${things._id}`}>
-          <h1>{things.name}</h1>
-        </Link>
-      </div>
-    ));  
-  };
-  const loading = () => {
-    return <h1>Rummage through our things</h1>
-  };
-  return (
-    <section>
-    <form onSubmit={handleSubmit}>
-        Name:<input 
-            type="text" 
-            name="name" 
-            onChange={handleChange} 
-            value={newForm.name} 
-        /><br />
-        Image:<input 
-          type="text" 
-          name="image" 
-          onChange={handleChange} 
-          value={newForm.image} 
-        /><br />
-         Description:<input 
-            type="text" 
-            name="Description" 
-            onChange={handleChange} 
-            value={newForm.Description} 
-        /><br />
-        Price:<input type="text" name="Price"
-        onChange = {handleChange}
-        value = {newForm.Price} 
-        /><br />
-    </form>
-    { props.rummage ? loaded() : loading() }
-</section>
-  )
+  { props.rummage ? loaded() : loading() }
+  
 }
+
+
+
+
+
 
 export default Landing
