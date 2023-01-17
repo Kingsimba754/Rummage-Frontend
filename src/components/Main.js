@@ -1,31 +1,58 @@
-import Index from '../pages/Index'
-import Card from './Card'
-import NewForm from './NewForm'
+import React, { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router';
+import Landing from '../pages/Landing';
+import Show from '../pages/Show';
 
-const Main = (props) => {
+function Main(props){
+  const [rummage, setRummage] = useState(null);
+  const URL = "http://localhost:4000/Rummage/";
+
+  const getRummage = async () =>{
+    const response = await fetch(URL);
+    const data = await response.json();
+    setRummage(data);
+  }
+
+  const createRummage = async (thing) => {
+    await fetch (URL, {
+      method: 'POST',
+      headers:{
+        "Content-type": "Application/json"
+      },
+      body: JSON.stringify(thing)
+    });
+    getRummage();
+  };
+  const updateRummage = async (id,updatedThing) =>{
+    await fetch(URL + id,{
+      method:'PUT',
+      headers:{
+        'Content-type': 'Application/json'
+      },
+      body:JSON.stringify(updatedThing)
+    });
+    getRummage();
+  };
+
+const deleteRummage = async (id)=>{
+  await fetch (URL+ id, {
+    method:'DELETE'
+  });
+  getRummage();
+};
+
+useEffect(()=>{
+  getRummage();
+},[]);
+
+
   return (
-    <div className="main">
-      <div className="main-wrap">
-      <div className="welcome">
-        <span className="big">Welcome</span> to Rummage. A place to rid yourself of unwanted things, pick up cool stuff for cheap, or browse for things you didn't know you wanted/needed. 
-      </div>
-      <div className="item-cards">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
-      <NewForm/>
-      </div>
-    </div>
+    <main>
+      <Routes>
+        <Route path = '/' element = {
+          <Index/>} />
+      </Routes>
+    </main>
   )
 }
 

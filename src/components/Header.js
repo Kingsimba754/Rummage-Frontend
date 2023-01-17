@@ -1,4 +1,6 @@
 import React from 'react';
+
+
 const Header = (props) => {
   return (
     <nav>
@@ -23,5 +25,4 @@ const Header = (props) => {
 </nav>
   )
 }
-
 export default Header
