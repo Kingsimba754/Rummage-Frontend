@@ -7,6 +7,7 @@ function Landing (props){
     name : '',
     image : '',
     Description: '',
+    Price: '',
   };
   const [newForm, setNewForm] = useState (formFields);
   const handleChange = (event) =>{
@@ -42,19 +43,22 @@ function Landing (props){
             onChange={handleChange} 
             value={newForm.name} 
         /><br />
-        Title:<input 
-            type="text" 
-            name="title" 
-            onChange={handleChange} 
-            value={newForm.title} 
-        /><br />
         Image:<input 
-            type="text" 
-            name="image" 
-            onChange={handleChange} 
-            value={newForm.image} 
+          type="text" 
+          name="image" 
+          onChange={handleChange} 
+          value={newForm.image} 
         /><br />
-        <input type="submit" value="Add Person" />
+         Description:<input 
+            type="text" 
+            name="Description" 
+            onChange={handleChange} 
+            value={newForm.Description} 
+        /><br />
+        Price:<input type="text" name="Price"
+        onChange = {handleChange}
+        value = {newForm.Price} 
+        /><br />
     </form>
     { props.people ? loaded() : loading() }
 </section>
