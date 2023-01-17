@@ -1,13 +1,26 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-
 const Header = (props) => {
   return (
-    <nav className='nav'>
-     <Link to = '/'>
-      <div>Rummage App</div>
-     </Link>
-    </nav>
+    <nav>
+      
+  <ul className="nav-el">
+    <li>
+      <a href="/" className="secondary">
+        <img src="https://dev.lehi.work/img/rumg-logo.png"/>
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <li><h2 className="head-title">Rummage</h2></li>
+  </ul>
+  <ul className="nav-el">
+  <li>
+      <a href="/firebase-auth" className="primary">
+       <button className="contrast">Login</button>
+      </a>
+    </li>
+  </ul>
+</nav>
   )
 }
 
