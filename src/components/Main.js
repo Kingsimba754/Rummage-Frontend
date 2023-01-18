@@ -15,23 +15,23 @@ function Main(props){
     setRummage(data);
   }
 
-  const createRummage = async (thing) => {
+  const createRummage = async (Item) => {
     await fetch (URL, {
       method: 'POST',
       headers:{
         "Content-type": "Application/json"
       },
-      body: JSON.stringify(thing)
+      body: JSON.stringify(Item)
     });
     getRummage();
   };
-  const updateRummage = async (id,updatedThing) =>{
+  const updateRummage = async (id,updatedItem) =>{
     await fetch(URL + id,{
       method:'PUT',
       headers:{
         'Content-type': 'Application/json'
       },
-      body:JSON.stringify(updatedThing)
+      body:JSON.stringify(updatedItem)
     });
     getRummage();
   };
@@ -53,18 +53,18 @@ useEffect(()=>{
       <Routes>
         <Route path = '/rummage' element = {
           <Landing
-          rummage={rummage}
-          createRummage={createRummage}/>}
+          rummage={rummage}/>}
            />
           <Route path = '/rummage/new' element = {
-            <NewForm/>} />
+            <NewForm
+            createRummage={createRummage}/>} />
           <Route path = '/rummage/:id' element = {
             <Show
             rummage={rummage}
             updateRummage={updateRummage}
             deleteRummage={deleteRummage}/>} />
       </Routes>
-      <Card/>
+     <Card/>
     </main>
   )
 }

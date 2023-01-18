@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 
 const Landing = (props) => {
   const loaded = () => {
-    return props.rummage.map((items) => (
-      <div key={items._id}>
-        <Link to={`/Rummage/${items._id}`}>
-          <h1>{items.name}</h1>
-          <div>{items.image}</div>
+    return props.rummage.map(Item => (
+      <div key={Item._id}>
+        <Link to={`/Rummage/${Item._id}`}>
+          <h1>{Item.name}</h1>
+          <div>{Item.image}</div>
         </Link>
-        <div>{items.price}</div>
+        <div>{Item.price}</div>
       </div>
     ));
   };
 
   const loading = () => {
-    return <h1>Rummaging through our items</h1>;
+    return <h1>Rummaging through our Item</h1>;
   };
 
   {
