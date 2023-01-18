@@ -7,7 +7,7 @@ const Landing = (props) => {
     return  props.items.map((item) => (
       <div key={item._id} className="item">
 
-        <Link to={`/rummage/${item._id}`}>
+        <Link to={`/${item._id}`}>
           <h1>{item.name}</h1> 
         </Link> 
           <img src={item.image} alt={item.name} />
@@ -28,7 +28,6 @@ const Landing = (props) => {
         {props.items ? loaded() : loading()}
     </section>
   )
-
 };
 
 

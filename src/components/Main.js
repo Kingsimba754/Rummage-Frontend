@@ -10,7 +10,7 @@ function Main(props){
   // item -> references an individual item
 
   const [items, setRummage] = useState(null);
-  const URL = "http://localhost:4000/rummage/";
+  const URL = "http://localhost:4000/";
 
   // Get data from JSON API created in backend on localhost:4000
   const getRummage = async () =>{
@@ -60,7 +60,7 @@ function Main(props){
     <main>
       <Routes>
 
-        <Route exact path = '/rummage' 
+        <Route exact path = '/'
           element = {<>
           <Card/>
           <Landing
@@ -68,7 +68,7 @@ function Main(props){
           /></>}
         />
           
-        <Route path = '/rummage/new' 
+        <Route path = '/new' 
           element = {
             <NewForm
               items={items}
@@ -76,7 +76,7 @@ function Main(props){
             />} 
         />
           
-        <Route path = '/rummage/:id' 
+        <Route path = '/:id' 
           element = {
             <Show
               items={items}
