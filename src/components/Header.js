@@ -22,7 +22,7 @@ const Header = (props) => {
       </a>
     </li>
     <li>
-      <a href="/rummage/new" className="primary">
+      <a href="/new" className="primary">
        <button className="contrast">Create</button>
       </a>
     </li>
