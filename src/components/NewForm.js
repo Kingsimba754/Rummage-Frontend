@@ -40,7 +40,12 @@ function NewForm (props) {
                 Description:<input type="text" name="description" onChange={handleChange} value={newForm.description}/><br />
                 Price:<input type="text" name="price"onChange = {handleChange} value = {newForm.price} placeholder = "how much?"/><br />     
                 </div>
+
                 <input type="submit" id="submitBtn"/>
+
+                    {/* <input type="textarea" id="price" name="price-name" placeholder="What do you want for it?" required/> */}
+                <button type="submit">Submit</button>
+
             </form>
       </div>
     )
