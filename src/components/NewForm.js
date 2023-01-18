@@ -27,7 +27,7 @@ function NewForm (props) {
       
       <div className="new-item">
           <article>
-            <form>
+            <form onSubmit={handleSubmit}>
             <label>What do you need gone?</label>
                 <div className="grid">
                 Name:<input type="text" name="name" onChange={handleChange} value={newForm.name} placeholder="What are you selling?"/><br />

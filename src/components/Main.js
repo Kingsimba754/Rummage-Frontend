@@ -52,11 +52,17 @@ useEffect(()=>{
     <main>
       <Routes>
         <Route path = '/rummage' element = {
-          <Landing/>} />
+          <Landing
+          rummage={rummage}
+          createRummage={createRummage}/>}
+           />
           <Route path = '/rummage/new' element = {
             <NewForm/>} />
           <Route path = '/rummage/:id' element = {
-            <Show/>} />
+            <Show
+            rummage={rummage}
+            updateRummage={updateRummage}
+            deleteRummage={deleteRummage}/>} />
       </Routes>
       <Card/>
     </main>
