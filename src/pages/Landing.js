@@ -9,7 +9,7 @@ const Landing = (props) =>{
     return (
     props.rummage.map(items =>(
       <div key = {items._id}>
-        <Link to = {`/Rummage/${items._id}`}>
+        <Link to = {`/rummage/${items._id}`}>
           <h1>{items.name}</h1>
           <div>{items.image}</div>
         </Link>

@@ -7,7 +7,7 @@ import Show from '../pages/Show';
 
 function Main(props){
   const [rummage, setRummage] = useState(null);
-  const URL = "http://localhost:4000/Rummage/";
+  const URL = "http://localhost:4000";
 
   const getRummage = async () =>{
     const response = await fetch(URL);
@@ -51,11 +51,14 @@ useEffect(()=>{
   return (
     <main>
       <Routes>
-        <Route path = '/' element = {
-          <Landing/>} />
-          <Route path = '/rummage/new' element = {
-            <NewForm/>} />
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/rummage/new' element = {<NewForm/>}/>
       </Routes>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
       <Card/>
     </main>
   )

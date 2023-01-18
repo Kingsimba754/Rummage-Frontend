@@ -2,6 +2,10 @@
 
 @import url("https://use.typekit.net/doo7gcl.css");
 
+*{
+  margin: 0 0;
+  padding: 0 0;
+}
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -15,16 +19,21 @@
   white-space: nowrap;
   direction: ltr;
   color: rgb()
-} 
+}
 
+nav ol:last-of-type, nav ul:last-of-type{
+  margin: 0 0;
+}
 .App {
   text-align: center;
+  background-color: rgb(246, 197, 83);
+  height: 100vh;
 }
 .App-link {
   color: #61dafb;
 }
 :is(h1, h2, h2, h4){
-  font-family: 'Nunito', sans-serif;
+  font-family: 'alkaline-caps', sans-serif;
 }
 h1{
   font-size: 2.6rem;
@@ -33,20 +42,19 @@ h1{
 }
 h2{
   color: rgb(41, 41, 46);
-
 }
 .big{
   font-size: 3.2rem;
   line-height: 2.8rem;
 }
 .head-title{
-  font-family: alfarn-2, monospace;
+  font-family: alkaline, monospace;
   color: rgb(246, 197, 83);
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   margin: 0 0;
 }
-.main{
-
+.logo-head{
+  margin: 0 0 0 32px;
 }
 .main-wrap{
   background: url(https://via.placeholder.com/750x220) no-repeat;
@@ -65,7 +73,11 @@ h2{
   text-align: left;
 }
 .nav-el li{
-  margin: 0 66px;
+  margin: 0 0 0 32px;
+  font-size: 48px;
+}
+.nav-el li:last-child{
+  margin: 0 32px 0 0;
   font-size: 48px;
 }
 li img{
@@ -82,32 +94,48 @@ article{
   box-shadow: -3px 3px 3px rgba(66,66,66, .8);
 }
 .item{
-  margin: 12px 18px;
+  margin: 0px 16px -32px 16px;
   font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
   color: rgb(246, 197, 83);
 }
-.item-cards{
+main{
   display: grid;
   grid-template-columns: repeat(4, minmax( 120px, 1fr));
   justify-content: center;
   font-size: 4rem;
+  margin: 0 32px;
+}
+.new-item{
+  
+}
+
+@media (width >= 2600px){
+  main{
+    grid-template-columns: repeat(6, minmax( 120px, 1fr));
+  }
+}
+
+@media (width >= 1800px){
+  main{
+    grid-template-columns: repeat(5, minmax( 120px, 1fr));
+  }
 }
 
 @media (width <= 1199px){
-  .item-cards{
+  main{
     grid-template-columns: repeat(3, minmax( 120px, 1fr));
   }
 }
 
 @media (width <= 899px){
-  .item-cards{
+  main{
     grid-template-columns: repeat(2, minmax( 120px, 1fr));
   }
 }
 
 @media (width <= 678px){
-  .item-cards{
+  main{
     grid-template-columns: minmax( 120px, 1fr);
   }
 }
