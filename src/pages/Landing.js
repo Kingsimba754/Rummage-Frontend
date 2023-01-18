@@ -1,26 +1,36 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Landing = (props) => {
+
+  // Loaded function
   const loaded = () => {
-    return props.rummage.map(Item => (
-      <div key={Item._id}>
-        <Link to={`/Rummage/${Item._id}`}>
-          <h1>{Item.name}</h1>
-          <div>{Item.image}</div>
-        </Link>
-        <div>{Item.price}</div>
+    return  props.items.map((item) => (
+      <div key={item._id} className="item">
+
+        <Link to={`/rummage/${item._id}`}>
+          <h1>{item.name}</h1> 
+        </Link> 
+          <img src={item.image} alt={item.name} />
+          <h3>{item.price}</h3>
+
       </div>
     ));
   };
 
+  // Loading function
   const loading = () => {
     return <h1>Rummaging through our Item</h1>;
   };
 
-  {
-    props.rummage ? loaded() : loading();
-  }
+  // Return function
+  return(
+    <section>
+        {props.items ? loaded() : loading()}
+    </section>
+  )
+
 };
+
+
 
 export default Landing;
