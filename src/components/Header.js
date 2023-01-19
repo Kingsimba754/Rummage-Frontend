@@ -7,7 +7,7 @@ const Header = (props) => {
       
   <ul className="nav-el">
     <li>
-      <a href="/rummage" className="secondary">
+      <a href="/" className="secondary">
         <img src="https://dev.lehi.work/img/rumg-logo.png"/>
       </a>
     </li>

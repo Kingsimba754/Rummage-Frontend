@@ -13,14 +13,12 @@ function Show(props) {
 
     const item = props.items ? props.items.find(item => item._id === id) : null;
     
-
-
     const loaded = () =>{
         return (
             <div className="item">
                 <h2>{item.name}</h2>
                 <h2>{item.image && <img src={item.image} alt = {item.name}/>}</h2>
-                <h3>{item.Description}</h3>
+                <h3>{item.description}</h3>
                 {/* <form onSubmit = {handleSubmit}>
 
                 </form> */}
