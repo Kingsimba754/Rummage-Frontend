@@ -1,7 +1,10 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 
 function NewForm (props) {
+
+  const navigate = useNavigate();
  
   const formFields = {
     name : '',
@@ -21,12 +24,14 @@ function NewForm (props) {
     event.preventDefault();
     props.createRummage(newForm);
     setNewForm(formFields);
+
+    // redirect
+    navigate('/');
   };
 
     return (
       
       <div className="new-item">
-          <article>
             <form onSubmit={handleSubmit}>
             <label>What do you need gone?</label>
                 <div className="grid">
@@ -35,10 +40,13 @@ function NewForm (props) {
                 Description:<input type="text" name="description" onChange={handleChange} value={newForm.description}/><br />
                 Price:<input type="text" name="price"onChange = {handleChange} value = {newForm.price} placeholder = "how much?"/><br />     
                 </div>
-                    <input type="textarea" id="price" name="price-name" placeholder="What do you want for it?" required/>
+
+                <input type="submit" id="submitBtn"/>
+
+                    {/* <input type="textarea" id="price" name="price-name" placeholder="What do you want for it?" required/> */}
                 <button type="submit">Submit</button>
+
             </form>
-          </article>
       </div>
     )
   }

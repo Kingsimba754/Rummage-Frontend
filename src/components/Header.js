@@ -7,7 +7,7 @@ const Header = (props) => {
       
   <ul className="nav-el">
     <li>
-      <a href="/" className="logo-head">
+      <a href="/" className="secondary">
         <img src="https://dev.lehi.work/img/rumg-logo.png"/>
       </a>
     </li>
@@ -16,14 +16,9 @@ const Header = (props) => {
     <li><h2 className="head-title">Rummage</h2></li>
   </ul>
   <ul className="nav-el">
-  {/* <li>
-      <a href="/firebase-auth" className="primary">
-       <button className="contrast outline">Login</button>
-      </a>
-    </li> */}
     <li>
       <a href="/rummage/new" className="primary">
-       <button className="contrast outline">Create</button>
+       <button className="contrast">Create</button>
       </a>
     </li>
   </ul>
