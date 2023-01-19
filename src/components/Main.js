@@ -62,7 +62,6 @@ function Main(props){
         <Route exact path = '/' 
           element = {
               <>
-              <Card/>
               <Landing items={items}/>
               </>
               }

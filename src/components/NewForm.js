@@ -34,7 +34,7 @@ function NewForm (props) {
       <div className="new-item">
             <form onSubmit={handleSubmit}>
               <label>What do you need gone?</label>
-                <div className="grid">
+                <div className="form">
                 Name:<input type="text" name="name" onChange={handleChange} value={newForm.name} placeholder="What are you selling?"/><br />
                 Image:<input type="text" name="image" onChange={handleChange}  value={newForm.image} placeholder = "Upload your image"/><br />
                 Description:<input type="text" name="description" onChange={handleChange} value={newForm.description}/><br />
