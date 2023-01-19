@@ -19,11 +19,11 @@ function Show(props) {
     
     const loaded = () =>{
         return (
-            <div className="item">
+            <div className="item-show">
                 <h2>{item.name}</h2>
                 <h2>{item.image && <img src={item.image} alt = {item.name}/>}</h2>
                 <h3>{item.description}</h3>
-                <h4>{item.price}</h4>
+                <h4>${item.price}</h4>
                 {/* <form onSubmit = {handleSubmit}>
 
                 </form> */}

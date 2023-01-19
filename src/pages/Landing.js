@@ -11,7 +11,7 @@ const Landing = (props) => {
           <h1>{item.name}</h1> 
         </Link> 
           <img src={item.image} alt={item.name} />
-          <h3>{item.price}</h3>
+          <h3>${item.price}</h3>
 
       </div>
     ));
