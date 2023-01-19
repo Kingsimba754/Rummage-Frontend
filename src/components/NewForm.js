@@ -32,10 +32,10 @@ function NewForm (props) {
                 <div className="grid">
                 Name:<input type="text" name="name" onChange={handleChange} value={newForm.name} placeholder="What are you selling?"/><br />
                 Image:<input type="text" name="image" onChange={handleChange}  value={newForm.image} placeholder = "Upload your image"/><br />
-                Description:<input type="text" name="Description" onChange={handleChange} value={newForm.Description}/><br />
-                Price:<input type="text" name="Price"onChange = {handleChange} value = {newForm.Price} placeholder = "how much?"/><br />     
+                Description:<input type="text" name="description" onChange={handleChange} value={newForm.description}/><br />
+                Price:<input type="text" name="price"onChange = {handleChange} value = {newForm.price} placeholder = "how much?"/><br />     
                 </div>
-                <input type="file" name="image" onChange={handleChange}  value={newForm.image} placeholder = "Upload your image"/><br />
+                    <input type="textarea" id="price" name="price-name" placeholder="What do you want for it?" required/>
                 <button type="submit">Submit</button>
             </form>
           </article>

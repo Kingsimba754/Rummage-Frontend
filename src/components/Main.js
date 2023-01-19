@@ -6,8 +6,11 @@ import Card from './Card';
 import Show from '../pages/Show';
 
 function Main(props){
-  const [rummage, setRummage] = useState(null);
-  const URL = "http://localhost:4000/Rummage/";
+  // items -> plural, for the entire array of items
+  // item -> references an individual item
+
+  const [items, setRummage] = useState(null);
+  const URL = "http://localhost:4000/rummage/";
 
   // Get data from JSON API created in backend on localhost:4000
   const getRummage = async () =>{
@@ -56,12 +59,29 @@ function Main(props){
   return (
     <main>
       <Routes>
-        <Route path = '/' element = {
-          <Landing/>} />
-          <Route path = '/rummage/new' element = {
-            <NewForm/>} />
+        <Route exact path = '/rummage' 
+          element = {<>
+          <Card/>
+          <Landing
+            items={items}
+          /></>}
+        />     
+        <Route path = '/rummage/new' 
+          element = {
+            <NewForm
+              items={items}
+              createRummage={createRummage}// adds createRummage prop
+            />} 
+        />          
+        <Route path = '/rummage/:id' 
+          element = {
+            <Show
+              items={items}
+              updateRummage={updateRummage}  // adds updateRummage prop
+              deleteRummage={deleteRummage} // adds deleteRummage prop
+            />}
+        />
       </Routes>
-      <Card/>
     </main>
   )
 }
