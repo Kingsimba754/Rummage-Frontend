@@ -1,7 +1,7 @@
+const Hero = (props) => {
 
-const Card = (props) => {
   return (
-    <div className="item">
+    <div className="hero">
         <article>
             <h1>waddup world!</h1>
             This is my item for sale. Here is some information about it and what it costs and stuff.
@@ -10,4 +10,4 @@ const Card = (props) => {
   )
 }
 
-export default Card
+export default Hero

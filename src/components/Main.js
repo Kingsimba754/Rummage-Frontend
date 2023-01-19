@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Landing from '../pages/Landing';
 import NewForm from './NewForm';
-import Card from './Card';
+import Hero from './Hero';
 import Show from '../pages/Show';
 
 function Main(props){
