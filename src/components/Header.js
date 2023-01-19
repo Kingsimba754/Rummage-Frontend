@@ -13,11 +13,14 @@ const Header = (props) => {
     </li>
   </ul>
   <ul>
-    <li><h2 className="head-title">Rummage</h2></li>
+    <li>
+      <a href="/" className="secondary"><h2 className="head-title">Rummage</h2>
+      </a>
+    </li>
   </ul>
   <ul className="nav-el">
     <li>
-      <a href="/rummage/new" className="primary">
+      <a href="/new" className="primary">
        <button className="contrast">Create</button>
       </a>
     </li>

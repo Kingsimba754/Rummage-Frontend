@@ -59,15 +59,14 @@ function Main(props){
   return (
     <main>
       <Routes>
-
         <Route exact path = '/' 
-          element = {<>
-          <Card/>
-          <Landing
-            items={items}
-          /></>}
-        />
-          
+          element = {
+              <>
+              <Card/>
+              <Landing items={items}/>
+              </>
+              }
+        />          
         <Route path = '/new' 
           element = {
             <NewForm

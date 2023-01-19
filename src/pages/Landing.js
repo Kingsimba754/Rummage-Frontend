@@ -19,7 +19,7 @@ const Landing = (props) => {
 
   // Loading function
   const loading = () => {
-    return <h1>Rummaging through our Item</h1>;
+    return <h1>Rummaging through our Items</h1>;
   };
 
   // Return function
