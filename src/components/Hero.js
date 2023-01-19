@@ -2,12 +2,11 @@ const Hero = (props) => {
 
   return (
     <div className="hero">
-        <article>
-            <h1>waddup world!</h1>
-            This is my item for sale. Here is some information about it and what it costs and stuff.
-        </article>
+        <div className="hero-text">
+          <h1 className="big">Welcome to <span className="attn">Rummage</span>,</h1> your one stop shop for decluttering, letting go of unwanted and unused items.
+        </div>
     </div>
   )
 }
 
-export default Hero
+export default Hero 

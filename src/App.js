@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Main from './components/Main';
+import Hero from './components/Hero';
 import './App.css';
 
 

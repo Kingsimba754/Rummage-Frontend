@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
 
 const Landing = (props) => {
 
   // Loaded function
   const loaded = () => {
     return  props.items.map((item) => (
-      <div key={item._id} className="item" style={{ backgroundImage: `url("${item.image}")`}}>
-
-        <Link to={`/${item._id}`}>
-          <h1>{item.name}</h1> 
-          <h3>${item.price}</h3>
-          </Link> 
-      </div>
+        <div key={item._id} className="item" style={{ backgroundImage: `url("${item.image}")`}}>
+          <Link to={`/${item._id}`}>
+            <h1>{item.name}</h1> 
+            <h3>${item.price}</h3>
+            </Link> 
+        </div>
     ));
   };
 
@@ -22,9 +22,12 @@ const Landing = (props) => {
 
   // Return function
   return(
+    <>
+    <Hero/>
     <section>
         {props.items ? loaded() : loading()}
     </section>
+    </>
   )
 };
 

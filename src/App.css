@@ -50,6 +50,9 @@ main{
   justify-content: center;
   gap: 1rem;
 }
+.attn{
+  color: dodgerblue;
+}
 label{
   font-family: alkaline-caps, script;
   color:rgb(41, 41, 46);
@@ -57,8 +60,11 @@ label{
   margin: 12px 12px;
 }
 .big{
-  font-size: 2.4rem;
-  line-height: 2.8rem;
+  font-size: 4rem;
+  line-height: 4.6rem;
+  font-family: alkaline, script;
+  text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
+  margin-left: -166px;
 }
 .head-title{
   font-family: alkaline, monospace;
@@ -124,6 +130,28 @@ section h1{
 }
 section a{
   text-decoration: none;
+}
+button{
+  font-family: halogen, sans-serif;
+  text-transform: uppercase;
+}
+.hero{
+  font-family: alkaline-caps, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(255,255,255,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://dev.lehi.work/img/self-bike.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  width: 100vw;
+}
+.hero-text{
+  max-width: 766px;
+  line-height: 1.6rem;
 }
 .new-item{
   display: flex;
