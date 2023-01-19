@@ -6,6 +6,7 @@ import React from 'react'
 function Show(props) {
     const{id} = useParams();
     const navigate = useNavigate();
+
     const handleDelete = () =>{
         props.deleteRummage(id);
         navigate('/');
