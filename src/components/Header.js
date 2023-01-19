@@ -16,11 +16,7 @@ const Header = (props) => {
     <li><h2 className="head-title">Rummage</h2></li>
   </ul>
   <ul className="nav-el">
-  <li>
-      <a href="/firebase-auth" className="primary">
-       <button className="contrast">Login</button>
-      </a>
-    </li>
+  
     <li>
       <a href="/new" className="primary">
        <button className="contrast">Create</button>
