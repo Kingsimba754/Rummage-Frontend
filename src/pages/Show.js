@@ -10,6 +10,9 @@ function Show(props) {
         props.deleteRummage(id);
         navigate('/');
     };
+    const goHome = ()=>{
+        navigate('/')
+    };
 
     const item = props.items ? props.items.find(item => item._id === id) : null;
     
@@ -23,6 +26,7 @@ function Show(props) {
 
                 </form> */}
                 <button onClick = {handleDelete}>Delete this Item</button>
+                <button onClick = {goHome}>Home Page</button>
             </div>
         );
     };
