@@ -21,7 +21,7 @@ const Header = (props) => {
   <ul className="nav-el">
     <li>
       <a href="/new" className="primary">
-       <button className="contrast">Create</button>
+       <button className="contrast">Post</button>
       </a>
     </li>
   </ul>
