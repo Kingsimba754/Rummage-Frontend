@@ -23,6 +23,7 @@ function Show(props) {
                 <h2>{item.name}</h2>
                 <h2>{item.image && <img src={item.image} alt = {item.name}/>}</h2>
                 <h3>{item.description}</h3>
+                <h4>{item.price}</h4>
                 {/* <form onSubmit = {handleSubmit}>
 
                 </form> */}
