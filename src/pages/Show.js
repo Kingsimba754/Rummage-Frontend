@@ -1,10 +1,9 @@
-import {usestate,useEffect} from "react";
 import { useParams,useNavigate } from "react-router-dom";
 
 import React from 'react'
 
 function Show(props) {
-    const{id} = useParams();
+    const{ id } = useParams();
     const navigate = useNavigate();
 
     const handleDelete = () =>{
@@ -23,10 +22,7 @@ function Show(props) {
                 <h2>{item.name}</h2>
                 <h2>{item.image && <img src={item.image} alt = {item.name}/>}</h2>
                 <h3>{item.description}</h3>
-                <h4>${item.price}</h4>
-                {/* <form onSubmit = {handleSubmit}>
-
-                </form> */}
+                <h4>{item.price}</h4>
                 <button onClick = {handleDelete}>Delete this Item</button>
                 <button onClick = {goHome}>Home Page</button>
             </div>
@@ -34,8 +30,8 @@ function Show(props) {
     };
     const loading = () =>{
         return <h2>Loading...</h2>
-    };
-    
+    }; 
+
     return (
         <section>
             { props.items ? loaded() : loading() }

@@ -59,15 +59,13 @@ function Main(props){
   return (
     <main>
       <Routes>
-
-        <Route exact path = '/'
-          element = {<>
-          <Card/>
-          <Landing
-            items={items}
-          /></>}
-        />
-          
+        <Route exact path = '/' 
+          element = {
+              <>
+              <Landing items={items}/>
+              </>
+              }
+        />          
         <Route path = '/new' 
           element = {
             <NewForm
@@ -84,9 +82,7 @@ function Main(props){
               deleteRummage={deleteRummage} // adds deleteRummage prop
             />}
         />
-
       </Routes>
-
     </main>
   )
 }

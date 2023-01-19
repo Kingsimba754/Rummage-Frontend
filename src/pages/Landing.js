@@ -5,21 +5,19 @@ const Landing = (props) => {
   // Loaded function
   const loaded = () => {
     return  props.items.map((item) => (
-      <div key={item._id} className="item">
+      <div key={item._id} className="item" style={{ backgroundImage: `url("${item.image}")`}}>
 
         <Link to={`/${item._id}`}>
           <h1>{item.name}</h1> 
-        </Link> 
-          <img src={item.image} alt={item.name} />
           <h3>${item.price}</h3>
-
+          </Link> 
       </div>
     ));
   };
 
   // Loading function
   const loading = () => {
-    return <h1>Rummaging through our Item</h1>;
+    return <h1>Rummaging through our Items</h1>;
   };
 
   // Return function
@@ -29,7 +27,5 @@ const Landing = (props) => {
     </section>
   )
 };
-
-
 
 export default Landing;
