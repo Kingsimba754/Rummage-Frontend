@@ -1,4 +1,3 @@
-import {usestate,useEffect} from "react";
 import { useParams,useNavigate } from "react-router-dom";
 
 import React from 'react'
