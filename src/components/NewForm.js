@@ -33,7 +33,7 @@ function NewForm (props) {
       
       <div className="new-item">
             <form onSubmit={handleSubmit}>
-            <label>What do you need gone?</label>
+              <label>What do you need gone?</label>
                 <div className="grid">
                 Name:<input type="text" name="name" onChange={handleChange} value={newForm.name} placeholder="What are you selling?"/><br />
                 Image:<input type="text" name="image" onChange={handleChange}  value={newForm.image} placeholder = "Upload your image"/><br />
@@ -41,11 +41,7 @@ function NewForm (props) {
                 Price:<input type="text" name="price"onChange = {handleChange} value = {newForm.price} placeholder = "how much?"/><br />     
                 </div>
 
-                <input type="submit" id="submitBtn"/>
-
-                    {/* <input type="textarea" id="price" name="price-name" placeholder="What do you want for it?" required/> */}
-                <button type="submit">Submit</button>
-
+            <input type="submit" id="submitBtn"/>
             </form>
       </div>
     )
