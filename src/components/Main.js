@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Landing from '../pages/Landing';
 import NewForm from './NewForm';
-import Hero from './Hero';
+//import Hero from './Hero';
 import Show from '../pages/Show';
 
 function Main(props){
@@ -10,7 +10,7 @@ function Main(props){
   // item -> references an individual item
 
   const [items, setRummage] = useState(null);
-  const URL = "http://localhost:4000/";
+  const URL = "https://rummage-rumr.herokuapp.com/";
 
   // Get data from JSON API created in backend on localhost:4000
   const getRummage = async () =>{
