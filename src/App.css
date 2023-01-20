@@ -12,7 +12,6 @@ html{
   margin: 0 0;
   padding: 0 0;
 }
-
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -46,8 +45,28 @@ h1{
   margin: 0 0;
 }
 h2{
+  font-family: basic-sans, sans-serif;
+  font-weight: 700;
   color: rgb(41, 41, 46);
   font-size: 1.8rem;
+}
+.item h3{
+  line-height: 1.8rem;
+  text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
+  transition: ease 260ms;
+}
+.item h2{
+  color:rgb(255, 255, 255);
+  line-height: 1.8rem;
+  text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
+  transition: ease 260ms;
+  font-weight: 800;
+}
+.item h2:hover{
+  color: rgb(13, 173, 253);
+  font-weight: 400;
+  text-shadow: -3px 2px 4px rgb(22, 22, 26);
+  transition: ease 260ms;
 }
 h3{
   font-size: 1.2rem;
@@ -59,7 +78,9 @@ h3{
 }
 h6{
   color: rgba(224, 224, 237, 0.8);
-  font-size: .8rem;
+  font-family: basic-sans, sans;
+  font-size: .9rem;
+  padding-top: 22px;
 }
 main{
   background-color: rgba(246, 197, 83, 1);
@@ -68,6 +89,9 @@ main{
 }
 .attn{
   color: dodgerblue;
+}
+.logo-spin{
+  background: url(http://dev.lehi.work/img/logo-spin.png);
 }
 label{
   font-family: alkaline-caps, script;
@@ -91,7 +115,7 @@ label{
 .form{
   display: flex;
   flex-direction: column;
-  font-family: alkaline-caps, monospace;
+  font-family: basic-sans, monospace;
   font-weight: 800;
   font-size: 1.4rem;
   text-align: left;
@@ -182,13 +206,17 @@ button:hover{
   justify-content: center;
 }
 input[type=submit]{
+  background-color: dodgerblue;
   box-shadow: 2px 2px 6px rgba(0,0,0,.8);
   transform: scale(.96);
+  border: none;
   transition: ease 260ms;
 }
 input[type=submit]:hover{
+  background-color: rgb(13, 99, 184);
   transform: scale(.98);
   transition: ease 260ms;
+  border: none;
 }
 .new-item input[type=text]{
   display: flex;
@@ -249,14 +277,20 @@ input[type=submit]:hover{
   align-items: center;
   justify-content: center;
 }
+.item-show img{
+  border-radius: 6px 6px;
+  box-shadow: -3px 2px 8px rgba(41, 41, 46, 0.8);
+
+}
 .footer{
   margin-top: auto;
+  padding-right: 32px;
   bottom: 0;
   height: 4.4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   box-shadow: 2px -1px 4px rgba(41, 41, 46, 0.8);
   background-color: rgb(41, 41, 46);
 }
@@ -265,18 +299,23 @@ input[type=submit]:hover{
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 @media (width >= 1600px){
 
 }
+
 @media (width <= 1599px){
 
 }
+
 @media (width <= 999px){
 
 }
+
 @media (width <= 736px){
 
 }
+
 @media (width <= 499px){
 
 }
