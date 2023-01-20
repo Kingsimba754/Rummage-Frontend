@@ -2,6 +2,17 @@
 
 @import url("https://use.typekit.net/doo7gcl.css");
 
+*{
+  margin: 0 0;
+  padding: 0 0;
+  /* outline: 1px solid red;
+  overflow: scroll; */
+}
+html{
+  margin: 0 0;
+  padding: 0 0;
+}
+
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
@@ -17,15 +28,16 @@
   color: rgb()
 } 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background-color: rgba(246, 197, 83);
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
 }
 .App-link {
   color: #61dafb;
 }
-:is(h1, h2, h2, h4){
+:is(h1, h2, h2, h4, h6){
   font-family: alkaline-caps, sans-serif;
 }
 h1{
@@ -45,11 +57,14 @@ h3{
   color:rgb(246, 197, 83);
   text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
 }
+h6{
+  color: rgba(224, 224, 237, 0.8);
+  font-size: .8rem;
+}
 main{
   background-color: rgba(246, 197, 83, 1);
   display: grid;
-  /* justify-content: center; */
-  gap: .1rem;
+  /* gap: .1rem; */
 }
 .attn{
   color: dodgerblue;
@@ -102,7 +117,6 @@ label{
   text-align: left;
 }
 .nav-el li{
-  margin: 0 66px;
   font-size: 48px;
 }
 li img{
@@ -110,6 +124,7 @@ li img{
 }
 nav{
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   background-color: rgb(41, 41, 46);
 }
@@ -120,22 +135,28 @@ article{
   flex-direction: column;
 }
 section{
-  max-width: 1366px;
+  width: 80vw;
   margin: 32px auto;
   display: grid;
-  gap: .5rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* gap: .5rem; */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-
 section h1{
   text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
 }
-section a{
+a{
   text-decoration: none;
 }
 button{
   font-family: halogen, sans-serif;
   text-transform: uppercase;
+  background-color: dodgerblue;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+button:hover{
+  background-color: rgb(13, 99, 184);
+  box-shadow: 2px 2px 6px rgb(41, 41, 46);
 }
 .hero{
   font-family: alkaline-caps, sans-serif;
@@ -145,33 +166,49 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://dev.lehi.work/img/self-bike.jpg');
+  background-image: url('https://dev.lehi.work/img/dream-finds.jpg');
   background-size: cover;
   background-position: center;
   height: 420px;
-  width: 100vw;
   border-bottom: 16px solid dodgerblue;
   box-shadow: 2px 2px 6px rgba(0,0,0,.8);
 }
 .hero-text{
-  max-width: 766px;
+  max-width: 840px;
   line-height: 1.6rem;
 }
 .new-item{
   display: flex;
   justify-content: center;
 }
-.new-item input[type=text]{
-  display: flex;
-  justify-content: center;
-  background-color: antiquewhite;
-  margin-bottom: 0;
+input[type=submit]{
+  box-shadow: 2px 2px 6px rgba(0,0,0,.8);
+  transform: scale(.96);
+  transition: ease 260ms;
+}
+input[type=submit]:hover{
+  transform: scale(.98);
+  transition: ease 260ms;
 }
 .new-item input[type=text]{
   display: flex;
   justify-content: center;
   background-color: antiquewhite;
   margin-bottom: 0;
+  color:rgb(41, 41, 46);
+  font-weight: 700;
+}
+:is(.new-item input[type=text], .new-item input[type=textarea]){
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+  margin-bottom: 0;
+  color:rgb(41, 41, 46);
+  font-weight: 700;
+}
+.new-item input[type=textarea]{
+  height: 112px;
+  color:rgb(41, 41, 46);
 }
 .new-item input[type=submit]{
   font-family: halogen, sans-serif;
@@ -187,7 +224,7 @@ button{
   padding: 22px 22px;
   border-radius: 6px 6px;
   align-items: center;
-  min-width: 100%;
+  /* min-width: 100%; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -212,36 +249,34 @@ button{
   align-items: center;
   justify-content: center;
 }
-/* @media (width >= 1599px){
-  section{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-  }
+.footer{
+  margin-top: auto;
+  bottom: 0;
+  height: 4.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 2px -1px 4px rgba(41, 41, 46, 0.8);
+  background-color: rgb(41, 41, 46);
 }
-@media (width <= 1199px){
-  section{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-      gap: .1rem;;
-  }
+.foot-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media (width >= 1600px){
+
+}
+@media (width <= 1599px){
+
 }
 @media (width <= 999px){
-  section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 }
 @media (width <= 736px){
-  section{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-  }
+
 }
 @media (width <= 499px){
-  section{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0;
-  }
-} */
+
+}

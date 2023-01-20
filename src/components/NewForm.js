@@ -36,8 +36,8 @@ function NewForm (props) {
               <label>What do you need gone?</label>
                 <div className="form">
                 Name:<input type="text" name="name" onChange={handleChange} value={newForm.name} placeholder="What are you selling?"/>
-                Image:<input type="text" name="image" onChange={handleChange}  value={newForm.image} placeholder = "Upload your image"/>
-                Description:<input type="text" name="description" onChange={handleChange} value={newForm.description}/>
+                Image:<input type="text" name="image" onChange={handleChange}  value={newForm.image} placeholder = "Image URL"/>
+                Description:<input type="textarea" placeholder="Tell me about your item!" wrap="hard" name="description" onChange={handleChange} value={newForm.description}/>
                 Price:<input type="text" name="price"onChange = {handleChange} value = {newForm.price} placeholder = "how much?"/>  
                 </div>
 
