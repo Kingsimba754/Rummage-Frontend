@@ -1,14 +1,25 @@
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
+import { NumericFormat } from 'react-number-format';
+import { PatternFormat } from 'react-number-format';
 
 const Landing = (props) => {
 
   // Loaded function
   const loaded = () => {
+    
+    // let units = ['', 'K', 'M', 'B']
+    // let sign = Math.sign(`${item.price}`)
+    // let unit = 0
+    // while(Math.abs(`${item.price}`) > 1000){
+    //   unit = unit + 1
+    //   ${item.price} = Math.floor(Math.abs(`${item.price}`) / 100)/10
+    // }
+
     return  props.items.map((item) => (
         <div key={item._id} className="item" style={{ backgroundImage: `url("${item.image}")`}}>
           <Link to={`/${item._id}`}>
-            <h1>{item.name}</h1> 
+            <h2>{item.name}</h2> 
             <h3>${item.price}</h3>
             </Link> 
         </div>
