@@ -10,7 +10,7 @@ function Main(props){
   // item -> references an individual item
 
   const [items, setRummage] = useState(null);
-  const URL = "https://git.heroku.com/rummage-rumr.git";
+  const URL = "https://rummage-rumr.herokuapp.com/";
 
   // Get data from JSON API created in backend on localhost:4000
   const getRummage = async () =>{
