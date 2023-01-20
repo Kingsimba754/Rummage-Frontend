@@ -1,4 +1,5 @@
 import { useParams,useNavigate } from "react-router-dom";
+import NumericLabel from "../components/NumericLabel";
 
 import React from 'react'
 
@@ -25,7 +26,8 @@ function Show(props) {
                 <div className="item-show-grid">
                     <h2>{item.name}</h2>
                     <h3>{item.description}</h3>
-                    <h4><span className="usd">$</span> {item.price}</h4>
+                    {/* <span className="usd">$</span> {item.price} */}
+                    <h4><NumericLabel params={{ currency: true, shortFormat: false, justification: 'C'}}>{item.price}</NumericLabel></h4>
                     <button onClick = {handleDelete}>Delete this Item</button>
                     <button onClick = {goHome}>Back to list</button>
                 </div>

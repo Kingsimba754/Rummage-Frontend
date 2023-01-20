@@ -2,7 +2,7 @@
 
 @import url("https://use.typekit.net/doo7gcl.css");
 
-*{
+*, h3{
   margin: 0 0;
   padding: 0 0;
   /* outline: 1px solid red;
@@ -50,29 +50,6 @@ h2{
   color: rgb(41, 41, 46);
   font-size: 1.8rem;
 }
-a{
-  text-decoration: none;
-}
-.item h3{
-  line-height: 1.8rem;
-  text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
-  transition: ease 260ms;
-  background-color: rgb(30, 144, 255);
-  padding: 12px 16px;
-  border-radius: 16px 16px;
-  transform: rotate(6deg);
-}
-.item h2{
-  color:rgb(255, 255, 255);
-  line-height: 1.8rem;
-  text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
-  transition: ease 260ms;
-}
-.item h2:hover{
-  color: rgb(30, 144, 255);
-  text-shadow: -3px 2px 4px rgb(22, 22, 26);
-  transition: ease 260ms;
-}
 h3{
   font-size: 1.2rem;
   font-family: halogen,sans-serif;
@@ -86,6 +63,43 @@ h6{
   font-family: basic-sans, sans;
   font-size: .9rem;
   padding-top: 22px;
+}
+a{
+  text-decoration: none;
+}
+.price-disp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 126px;
+  height: 126px;
+}
+.item h3{
+  font-family: lust-script-display;
+  font-size: 2.6rem;
+  transition: ease 260ms;
+  background-color: rgb(30, 144, 255);
+  border: 4px solid rgb(255, 255, 255);
+  padding: 16px 16px;
+  border-radius: 50%;
+  transform: rotate(6deg);
+  opacity: .8;
+}
+.item h3:hover{
+  transform: rotate(-14deg);
+  opacity: 1;
+}
+.item h2{
+  color:rgb(255, 255, 255);
+  line-height: 1.8rem;
+  text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
+  transition: ease 260ms;
+}
+.item h2:hover{
+  color: rgb(30, 144, 255);
+  text-shadow: -3px 2px 4px rgb(22, 22, 26);
+  transition: ease 260ms;
 }
 main{
   background-color: rgba(246, 197, 83, 1);
@@ -108,11 +122,13 @@ main{
 }
 .item-show h4{
   font-family: alkaline-caps, script;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   background-color: rgb(255, 255, 255);
+  margin: 24px 0;
   padding: 12px 16px;
   border-radius: 48px 48px;
   transform: rotate(-4deg);
+  box-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
 }
 .logo-spin{
   background: url(http://dev.lehi.work/img/logo-spin.png);
@@ -125,7 +141,7 @@ label{
 }
 .big{
   font-size: 4rem;
-  line-height: 4.6rem;
+  line-height: 4.2rem;
   font-family: alkaline, script;
   text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
   margin-left: -166px;
@@ -225,6 +241,16 @@ button:hover{
   display: flex;
   justify-content: center;
 }
+input[type=textarea]{
+  word-break: break-all;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  height: 6em;
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  flex-direction: column;
+}
 input[type=submit]{
   background-color: dodgerblue;
   box-shadow: 2px 2px 6px rgba(0,0,0,.8);
@@ -250,18 +276,19 @@ input[type=submit]:hover{
   display: flex;
   justify-content: center;
   background-color: antiquewhite;
-  margin-bottom: 0;
   color:rgb(41, 41, 46);
   font-weight: 700;
+  word-break: break-all;
 }
 .new-item input[type=textarea]{
-  height: 112px;
+  word-break:break-all;
+  overflow: scroll;
   color:rgb(41, 41, 46);
 }
 .new-item input[type=submit]{
   font-family: halogen, sans-serif;
   text-transform: uppercase;
-  width: 50vw;
+  width: 50%;
   margin: 16px 16px;
 }
 .item{
@@ -298,18 +325,20 @@ input[type=submit]:hover{
   margin: 12px 22px;
   justify-content: center;
   align-items: center;
+  width: 92%;
 }
 .item-show button{
   border-radius: 6px 6px;
   box-shadow: -3px 2px 8px rgba(41, 41, 46, 0.8);
-  width: 50%;
+  width: 66%;
 }
-.item-show img{
+.item-show-grid img{
   border-radius: 6px 6px;
   border: 12px solid dodgerblue;
   box-shadow: -3px 2px 8px rgba(41, 41, 46, 0.8);
   max-width: 560px;
   max-height: 600px;
+  width: 100%;
 }
 .item-show h3, h4{
   color:rgb(41, 41, 46);
@@ -343,7 +372,21 @@ input[type=submit]:hover{
 }
 
 @media (width <= 999px){
-
+  .big{
+    font-size: 4rem;
+    line-height: 3.2rem;
+    font-family: alkaline, script;
+    text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
+    margin-left: 0px;
+  }
+  .hero-text{
+    margin: 16px;
+    line-height: 1.6rem;
+  }
+  .item-show{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (width <= 736px){
@@ -351,5 +394,10 @@ input[type=submit]:hover{
 }
 
 @media (width <= 499px){
-
+  .head-title{
+    display: none;
+  }
+  h6{
+    font-size: .5rem;
+  }
 }
