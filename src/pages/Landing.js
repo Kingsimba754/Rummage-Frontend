@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import { NumericFormat } from 'react-number-format';
-import { PatternFormat } from 'react-number-format';
 
 const Landing = (props) => {
 
