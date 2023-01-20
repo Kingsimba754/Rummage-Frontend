@@ -108,6 +108,7 @@ main{
 }
 .attn{
   color: dodgerblue;
+  z-index: 100;
 }
 .usd{
   color: rgb(246, 197, 83);
@@ -141,10 +142,12 @@ label{
 }
 .big{
   font-size: 4rem;
-  line-height: 4.2rem;
+  line-height: 3.6rem;
   font-family: alkaline, script;
   text-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
   margin-left: -166px;
+  z-index: 80;
+  position: relative;
 }
 .head-title{
   font-family: alkaline, monospace;
