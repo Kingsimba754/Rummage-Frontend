@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const NumericLabel = (props) => {
 
@@ -10,9 +10,9 @@ const NumericLabel = (props) => {
       }
     }
 
-    var num = +num;
+    // var num = +num;
 
-    var minValue = minValue || 0;
+    // var minValue = minValue || 0;
     var si = [
       { value: 1E18, symbol: "E" },
       { value: 1E15, symbol: "P" },
@@ -20,7 +20,9 @@ const NumericLabel = (props) => {
       { value: 1E9,  symbol: "b" },
       { value: 1E6,  symbol: "m" },
       { value: 1E3,  symbol: "k" }
-    ], rx = /\.0+$|(\.[0-9]*[1-9])0+$/, i;
+    ], 
+    // rx = /\.0+$|(\.[0-9]*[1-9])0+$/, 
+    i;
 
     if(typeof num === 'number' && num >= minValue) {
       for (i = 0; i < si.length; i++) {
@@ -45,19 +47,19 @@ const NumericLabel = (props) => {
 
   if (props.params) {
       var locales = props.params.locales;
-      if (props.params.wholenumber == 'floor') {
+      if (props.params.wholenumber === 'floor') {
         var number = Math.floor(props.children);
-      } else if (props.params.wholenumber == 'ceil') {
-        var number = Math.ceil(props.children);
+      } else if (props.params.wholenumber === 'ceil') {
+        number = Math.ceil(props.children);
       } else {
-        var number = +props.children;
+        number = +props.children;
       }
 
       var styles = 'right';
-      if (props.params.justification == 'L') {
+      if (props.params.justification === 'L') {
         styles = 'left';
       }
-      else if (props.params.justification == 'C') {
+      else if (props.params.justification === 'C') {
         styles = 'center';
       }
       else {
@@ -72,7 +74,7 @@ const NumericLabel = (props) => {
         var currencyIndicator = props.params.currencyIndicator
       }
       else {
-        var currencyIndicator = 'USD';
+        currencyIndicator = 'USD';
       }
 
 
@@ -107,15 +109,16 @@ const NumericLabel = (props) => {
 
       var css = '';
       if(props.params.cssClass) {
+        // eslint-disable-next-line array-callback-return
         props.params.cssClass.map((clas) => {
           css += clas + ' ';
         });
       }
 
     } else {
-      var number = +props.children;
-      var locales = 'en-US';
-      var mystyle = {
+      number = +props.children;
+      locales = 'en-US';
+      mystyle = {
         'textAlign': 'left'
       };
     }
@@ -155,7 +158,7 @@ const NumericLabel = (props) => {
       props.params.title === true ? title = number : title = props.params.title;
     }
 
-    if( mystyle.textAlign && ( mystyle.textAlign == 'right' || mystyle.textAlign == 'center' )  ){
+    if( mystyle.textAlign && ( mystyle.textAlign === 'right' || mystyle.textAlign === 'center' )  ){
       // div
       if(title){
         // with title
