@@ -19,12 +19,16 @@ function Show(props) {
     const loaded = () =>{
         return (
             <div className="item-show">
-                <h2>{item.name}</h2>
-                <h2>{item.image && <img src={item.image} alt = {item.name}/>}</h2>
-                <h3>{item.description}</h3>
-                <h4>{item.price}</h4>
-                <button onClick = {handleDelete}>Delete this Item</button>
-                <button onClick = {goHome}>Home Page</button>
+                <div className="item-show-grid">
+                    {item.image && <img src={item.image} alt = {item.name}/>}
+                </div>
+                <div className="item-show-grid">
+                    <h2>{item.name}</h2>
+                    <h3>{item.description}</h3>
+                    <h4><span className="usd">$</span> {item.price}</h4>
+                    <button onClick = {handleDelete}>Delete this Item</button>
+                    <button onClick = {goHome}>Back to list</button>
+                </div>
             </div>
         );
     };
