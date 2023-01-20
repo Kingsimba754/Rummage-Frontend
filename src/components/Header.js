@@ -6,18 +6,14 @@ const Header = (props) => {
     <nav>
       
   <ul className="nav-el">
-    <li>
-      <a href="/">
-        <div className="logo-spin">
-          <img alt="logo" className="logo-spin" src="https://dev.lehi.work/img/logo-r.png"/>
-        </div>
+    <li><a href="/">
+        <img alt="logo" className="logo-spin" src="https://dev.lehi.work/img/logo-r.png"/>
       </a>
     </li>
   </ul>
   <ul>
     <li>
-    <h2 className="head-title"><a href="/">Rummage
-      </a></h2>
+    <h2 className="head-title"><a href="/">Rummage</a></h2>
     </li>
   </ul>
   <ul className="nav-el">
