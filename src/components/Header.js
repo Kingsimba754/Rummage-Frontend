@@ -7,10 +7,13 @@ const Header = (props) => {
       
   <ul className="nav-el">
     <li>
+
       <a href="/">
         <div className="logo-spin">
           <img alt="logo" className="logo-spin" src="https://dev.lehi.work/img/logo-r.png"/>
         </div>
+      <a href="/" className="secondary">
+        <img src="https://dev.lehi.work/img/rumg-logo.png" alt="LOGO"/>
       </a>
     </li>
   </ul>
