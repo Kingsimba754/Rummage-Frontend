@@ -390,7 +390,9 @@ input[type=submit]:hover{
 }
 
 @media (width <= 736px){
-
+  h6{
+    font-size: .7rem;
+  }
 }
 
 @media (width <= 499px){
