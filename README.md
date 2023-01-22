@@ -36,9 +36,9 @@
 
 ## The planning tools:
 
-| <h2>Trello</h2>                             | <h2>Figma</h2>                                                      |     |
-| ------------------------------------------- | ------------------------------------------------------------------- | --- |
-| https://trello.com/b/hZJVNcsq/sei-project-3 | https://www.figma.com/file/RfVbcOhkL3ssf5qDtGhKfa/GA-SEIR-Project-3 |     |
+| <h2>Trello</h2>                             | <h2>Figma</h2>                                                      |
+| ------------------------------------------- | ------------------------------------------------------------------- |
+| https://trello.com/b/hZJVNcsq/sei-project-3 | https://www.figma.com/file/RfVbcOhkL3ssf5qDtGhKfa/GA-SEIR-Project-3 |
 
 <img src="public/img/screen-main.jpg" width=49%>
 <img src="public/img/screen-item.jpg" width=49%>
