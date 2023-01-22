@@ -30,7 +30,7 @@ html{
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: rgba(246, 197, 83);
+  background-color: rgb(246, 197, 83);
   min-height: 100vh;
 }
 .App-link {
@@ -125,15 +125,61 @@ main{
   font-family: alkaline-caps, script;
   font-size: 1.8rem;
   background-color: rgb(255, 255, 255);
-  margin: 24px 0;
+  margin: 32px 0 48px 0;
   padding: 12px 16px;
   border-radius: 48px 48px;
   transform: rotate(-4deg);
   box-shadow: -3px 2px 4px rgba(41, 41, 46, 0.8);
 }
-.logo-spin{
-  background: url(http://dev.lehi.work/img/logo-spin.png);
+.logo{
+  display: flex;
+  width:88px;
+  height: 88px;
+  background-image: url(https://dev.lehi.work/img/logo-r.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
 }
+.spin{
+  display: flex;
+  width:88px;
+  height: 88px;
+  background-image: url(https://dev.lehi.work/img/logo-spin.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+  justify-content: center;
+  animation: scroll-anim 10s linear infinite;
+  z-index: 100;
+}
+
+@keyframes scroll-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* .logo{
+  width: 84px;
+  height: 84px;
+  position: relative;
+  overflow: hidden;
+}
+.logo::before{
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: url(https://dev.lehi.work/img/logo-spin.png) center center no-repeat;
+} */
 label{
   font-family: alkaline-caps, script;
   color:rgb(41, 41, 46);
@@ -339,8 +385,6 @@ input[type=submit]:hover{
   border-radius: 6px 6px;
   border: 12px solid dodgerblue;
   box-shadow: -3px 2px 8px rgba(41, 41, 46, 0.8);
-  max-width: 560px;
-  max-height: 600px;
 }
 .item-show h3, h4{
   color:rgb(41, 41, 46);
@@ -394,6 +438,9 @@ input[type=submit]:hover{
 @media (width <= 736px){
   h6{
     font-size: .7rem;
+  }
+  .item-show-grid img{
+    border: 8px solid dodgerblue;
   }
 }
 
