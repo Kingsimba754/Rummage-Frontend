@@ -7,14 +7,6 @@ const Landing = (props) => {
 
   // Loaded function
   const loaded = () => {
-    
-    // let units = ['', 'K', 'M', 'B']
-    // let sign = Math.sign(`${item.price}`)
-    // let unit = 0
-    // while(Math.abs(`${item.price}`) > 1000){
-    //   unit = unit + 1
-    //   ${item.price} = Math.floor(Math.abs(`${item.price}`) / 100)/10
-    // }
 
     return  props.items.map((item) => (
         <div key={item._id} className="item" style={{ backgroundImage: `url("${item.image}")`}}>
