@@ -26,7 +26,6 @@ function Show(props) {
                 <div className="item-show-grid">
                     <h2>{item.name}</h2>
                     <h3>{item.description}</h3>
-                    {/* <span className="usd">$</span> {item.price} */}
                     <h4><NumericLabel params={{ currency: true, shortFormat: false, justification: 'C'}}>{item.price}</NumericLabel></h4>
                     <button onClick = {handleDelete}>Delete</button>
                     <button onClick = {goHome}>Back to list</button>

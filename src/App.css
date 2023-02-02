@@ -5,8 +5,6 @@
 *, h3{
   margin: 0 0;
   padding: 0 0;
-  /* outline: 1px solid red;
-  overflow: scroll; */
 }
 html{
   margin: 0 0;
@@ -16,7 +14,7 @@ html{
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
-  font-size: 42px;  /* Preferred icon size */
+  font-size: 42px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -104,7 +102,6 @@ a{
 main{
   background-color: rgba(246, 197, 83, 1);
   display: grid;
-  /* gap: .1rem; */
 }
 .attn{
   color: dodgerblue;
@@ -135,7 +132,7 @@ main{
   display: flex;
   width:88px;
   height: 88px;
-  background-image: url(https://dev.lehi.work/img/logo-r.png);
+  background-image: url(/public/img/logo-r.png);
   background-repeat: no-repeat;
   background-size: contain;
   align-items: center;
@@ -146,7 +143,7 @@ main{
   display: flex;
   width:88px;
   height: 88px;
-  background-image: url(https://dev.lehi.work/img/logo-spin.png);
+  background-image: url(/public/img/logo-spin.png);
   background-repeat: no-repeat;
   background-size: contain;
   align-items: center;
@@ -163,23 +160,6 @@ main{
     transform: rotate(360deg);
   }
 }
-
-/* .logo{
-  width: 84px;
-  height: 84px;
-  position: relative;
-  overflow: hidden;
-}
-.logo::before{
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  z-index: -1;
-  background: url(https://dev.lehi.work/img/logo-spin.png) center center no-repeat;
-} */
 label{
   font-family: alkaline-caps, script;
   color:rgb(41, 41, 46);
@@ -275,7 +255,7 @@ button:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://dev.lehi.work/img/dream-finds.jpg');
+  background-image: url('/public/img/dream-finds.jpg');
   background-size: cover;
   background-position: center;
   height: 420px;
@@ -408,15 +388,6 @@ input[type=submit]:hover{
   flex-direction: row;
   justify-content: space-evenly;
 }
-
-@media (width >= 1600px){
-
-}
-
-@media (width <= 1599px){
-
-}
-
 @media (width <= 999px){
   .big{
     font-size: 4rem;
